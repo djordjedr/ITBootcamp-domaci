@@ -1,0 +1,49 @@
+package metode;
+
+import java.util.Scanner;
+
+public class Metode3 {
+
+	public static void main(String[] args) {
+		/*
+		 * Dodatni Metode3: -> spojena prva dva zadatka sa malo izmenjenim zahtevima -> Napisati program koji ce procitati 3 cela broja sa standardnog ulaza i poziva i 
+		 * ispisuje dve metode. Prva ispisuje zbir tri unesena broja, a druga vraca najveci od unetih brojeva.
+
+		 */
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Unesite prvi broj: ");
+		int a=sc.nextInt();
+
+		System.out.println("Unesite drugi broj: ");
+		int b=sc.nextInt();
+		
+		System.out.println("Unesite treci broj: ");
+		int c=sc.nextInt();
+		
+		
+		System.out.println("Najveci je: " + najveci(a, b, c ));
+		
+		System.out.println("Zbir brojeva iznosi: "+ zbir(a,b,c));
+		
+		
+	}
+	
+	public static int najveci (int prvi, int drugi, int treci) {
+		int max=prvi;
+		if(max<drugi) {
+			max=drugi;  
+		}
+		if(max<treci) {
+			max=treci;
+		}
+		return max;
+	}
+	
+	public static int zbir (int prvi, int drugi, int treci) {
+		
+		int zbir=prvi + drugi + treci;
+		return zbir;
+	}
+
+}
